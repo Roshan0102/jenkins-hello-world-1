@@ -4,6 +4,7 @@ pipeline{
         stage('git checkout'){
             steps{
                 sh 'ls'
+                sh 'ls'
             }
         }
     }
