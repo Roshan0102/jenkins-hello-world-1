@@ -1,10 +1,14 @@
-pipeline{
+pipeline {
     agent any
-    stages{
-        stage('git checkout'){
-            steps{
-                sh 'ls'
-                sh 'ls'
+
+    tools {
+        maven "Maven-3.9"
+    }
+
+    stages {
+        stage('Check Maven Version') {
+            steps {
+                sh 'mvn -v'
             }
         }
     }
